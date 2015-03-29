@@ -31,6 +31,13 @@ app.config(['$stateProvider', function($stateProvider) {
                     templateUrl: 'templates/selectedItemView.html'
 
     })
+        // List settings
+    .state('searchresults', {
+        
+                    url: '/search',
+                    controller: 'searchCtrl',
+                    templateUrl: 'templates/searchView.html'
+})
     // List settings
     .state('settings', {
         

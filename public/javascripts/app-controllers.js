@@ -1,18 +1,27 @@
 /*
+
  + adding items to Swipe scope\
  + indication OR animation on swipe 
  + in-place editing: form and API
  + removing file and record
  + writing JSON file
+ + if image is not loaded
+
 
 TODO
+
+ - add file uploading
+
+ - get more file details - size/color etc
+ 
+ - search by title  
  
  - one item state - template and ctrl
  - adding new tags!
  - multiple tags!!
  - settings
  - r.js : bower_components->grunt->production files
- - if image is not loaded
+ 
 
 */
 
@@ -195,6 +204,12 @@ app.controller('loginCtrl', ['$scope', '$rootScope', '$state', 'getMedia',
 }]) 
 
 app.controller('itemCtrl', ['$scope', '$rootScope', '$state',
+                function($scope, $rootScope, $state){
+    
+
+}])
+
+app.controller('searchCtrl', ['$scope', '$rootScope', '$state',
                 function($scope, $rootScope, $state){
     
 
