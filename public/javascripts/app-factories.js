@@ -105,13 +105,13 @@ app.factory('getMedia', function($q, $http){
 
 })
 
-app.factory('getBoobs', function($q, $http){
+app.factory('getImages', function($q, $http){
 
-    var getBoobsdataFactory = {};
+    var getImagesdataFactory = {};
     
 
 
-    getBoobsdataFactory.getBoobsList = function () {
+    getImagesdataFactory.getList = function () {
 
         var deferred = $q.defer();
         
@@ -124,6 +124,6 @@ app.factory('getBoobs', function($q, $http){
 
 
 
-    return getBoobsdataFactory;
+    return getImagesdataFactory;
 
 })

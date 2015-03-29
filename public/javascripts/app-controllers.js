@@ -26,8 +26,8 @@ TODO
 */
 
 
-app.controller('swipeCtrl', ['$scope', '$rootScope', '$timeout', 'getMedia', 'getBoobs',
-                function($scope, $rootScope, $timeout, getMedia, getBoobs){
+app.controller('swipeCtrl', ['$scope', '$rootScope', '$timeout', 'getMedia', 'getImages',
+                function($scope, $rootScope, $timeout, getMedia, getImages){
         
         $scope.index = 0;
         $scope.savedItems = [];
@@ -38,7 +38,7 @@ app.controller('swipeCtrl', ['$scope', '$rootScope', '$timeout', 'getMedia', 'ge
             $scope.words = data;
         });
         
-        getBoobs.getBoobsList().then(function(data){
+        getImages.getList().then(function(data){
             $scope.selectedItems = data;
         });
 
@@ -70,7 +70,7 @@ app.controller('swipeCtrl', ['$scope', '$rootScope', '$timeout', 'getMedia', 'ge
         $scope.checkAmmount = function(){
 
             if($scope.selectedItems.length/$scope.index < 3){
-               getBoobs.getBoobsList().then(function(data){
+               getImages.getList().then(function(data){
                   $scope.selectedItems = _.union($scope.selectedItems, data);
                 });
             }
