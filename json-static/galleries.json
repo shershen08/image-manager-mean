@@ -1,6 +1,10 @@
 [
- {"title" : "Big", "id" : 0},
- {"title" : "Asisan", "id" : 1},
- {"title" : "Nice", "id" : 2},
- {"title" : "Blonde", "id" : 3}
+ {"title" : "Nature", "id" : 0},
+ {"title" : "Cities", "id" : 1},
+ {"title" : "Cars", "id" : 2},
+ {"title" : "Panoramic", "id" : 3},
+ {"title" : "Sky", "id" : 4},
+ {"title" : "Planes", "id" : 5},
+ {"title" : "Other", "id" : 6},
+ {"title" : "B&W", "id" : 7}
 ]
