@@ -1,0 +1,88 @@
+
+//USE NG_TOUCH - https://docs.angularjs.org/api/ngTouch
+
+
+/* Swipe-app plugin properties
+* --------------------------------- 
+* if item is omitted - defailt action is performed
+**/
+{
+    "isList"    : Boolean,
+    "url"       : String,
+    "title"     : String,
+    "onLoadList": Function,
+    "onLoadItem": Function,
+    "onLeft"    : Function,
+    "onRight"   : Function,
+    "onButton"  : Function,
+    "template"  : String
+}
+
+/* Swipe-app oboobs.ru plugin
+* ----------------
+* http://api.oboobs.ru/boobs/0/20/rank
+* http://media.oboobs.ru/boobs_preview/06886.jpg
+**/
+{
+    "isList"    : true,
+    "url"       : "http://api.oboobs.ru/noise/50",
+    "title"     : "oboobs.ru plugin",
+    "onLoadList": function convert_list_to_media(list){
+        var newList = [];
+
+        forEach(list, function(item, i ){
+            var obj = {};
+            obj['url'] = 'http://media.oboobs.ru/boobs_preview/' + item.id + '.jpg';
+            newList.push(obj);
+        })
+
+        return newList;
+    },
+    "onLoadItem": function loaded_item(item) {
+
+        // $img = $('<img src=' + item.url + '"/>');
+        // $img.load(function() {
+          
+        // });
+    }
+    "onRight"   : function save_to_favorites (item) {
+        // save to favorites
+        console.log('save to favorites', item);
+    },
+    "template"  : "<div class='img-cont'><img ng-src='{{url}}'/></div><div class='model-title'>{{title}}</div>"
+}
+
+
+/* Swipe-app Tumblr plugin
+* ----------------
+* https://www.tumblr.com/docs/en/api/v2
+**/
+{
+    "isList"    : Boolean,
+    "url"       : String,
+    "title"     : String,
+    "onLoadList": Function,
+    "onLoadItem": Function,
+    "onLeft"    : Function,
+    "onRight"   : Function,
+    "onButton"  : Function,
+    "template"  : String
+}
+
+/* Swipe-app Tumblr plugin
+* ----------------
+* http://coub.com/dev/docs/Coub+API/Overview
+**/
+{
+    "isList"    : Boolean,
+    "url"       : String,
+    "title"     : String,
+    "onLoadList": Function,
+    "onLoadItem": Function,
+    "onLeft"    : Function,
+    "onRight"   : Function,
+    "onButton"  : Function,
+    "template"  : String
+}
+
+
